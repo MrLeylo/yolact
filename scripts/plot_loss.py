@@ -7,7 +7,7 @@ with open(sys.argv[1], 'r') as f:
 	inp = f.read()
 
 patterns = {
-	'train': re.compile(r'\[\s*(?P<epoch>\d+)\]\s*(?P<iteration>\d+) \|\| B: (?P<b>\S+) \| C: (?P<c>\S+) \| M: (?P<m>\S+) \|( S: (?P<s>\S+) \|)? T: (?P<t>\S+)'),
+	'train': re.compile(r'\"data\": \{\"\S+\": \{\"B\": (?P<b>[0-9.]+), \"M\": (?P<m>[0-9.]+), \"C\": (?P<c>[0-9.]+), \"S\": (?P<s>[0-9.]+), \"T\": (?P<t>[0-9.]+)}, \"epoch": (?P<epoch>\d+), \"iter": (?P<iteration>\d+)'),
 	'val': re.compile(r'\s*(?P<type>[a-z]+) \|\s*(?P<all>\S+)')
 }
 data = {key: [] for key in patterns}
