@@ -242,3 +242,8 @@ For YOLACT++, please cite
 
 # Contact
 For questions about our paper or code, please contact [Daniel Bolya](mailto:dbolya@ucdavis.edu).
+
+# Ignasi Mas updates:
+For running the code on the Notebook, it is necessary to swap the official Repo for this fork. It includes the changes explained in the Notebook Discussion section.
+
+It will also be required to modify the pycocotools/cocoeval.py file. If working within the Google Colab notebook, this file is located in /usr/local/python3.6/dist-packages/pycocotools/cocoeval.py. You should swap this file by the one in the folder swap on this Repo.
